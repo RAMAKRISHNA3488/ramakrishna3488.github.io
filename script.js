@@ -5,6 +5,19 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+ // Get elements
+    const popupOverlay = document.getElementById('popup-overlay');
+    const mainContent = document.getElementById('main-content');
+    const closeBtn = document.getElementById('close-btn');
+
+    // When user clicks "Enter"
+    closeBtn.addEventListener('click', () => {
+      popupOverlay.style.display = 'none'; // hide popup
+      document.body.classList.remove('popup-active'); // remove popup class
+      mainContent.style.display = 'block'; // show portfolio
+    });
+
+
 $(document).ready(function(){
   $('#downloadBtn').click(function(){
       $('#downloadModal').modal('show');
