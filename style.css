@@ -581,14 +581,14 @@ footer p {
 
     /* Popup Box */
     #popup-box {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
+       background: #ffffff;
+      padding: 2rem;              /* 32px → 2rem */
+      border-radius: 0.75rem;     /* 12px → 0.75rem */
       text-align: center;
-      max-width: 400px;
-      width: 90%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      animation: popIn 0.3s ease;
+      max-width: 25rem;           /* 400px → 25rem */
+     width: 90%;
+     box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3); /* 5px 15px → rem */
+     animation: popIn 0.3s ease;
     }
 
     /* Animation for popup */
@@ -598,19 +598,33 @@ footer p {
     }
 
     /* Button */
-    #close-btn {
+    #close-btn,#cancelBtn,#enterBtn {
       background-color: black;
       color: white;
       border: none;
       padding: 10px 20px;
       border-radius: 6px;
-      margin-top: 15px;
+      margin-top: 10px;
       cursor: pointer;
       font-size: 16px;
       transition: 0.3s;
+      margin-bottom: 10px;
     }
 
-    #close-btn:hover {
+    .popup-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8rem;
+      margin-top: 10px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+  
+
+
+    #close-btn:hover,#cancelBtn:hover,#enterBtn:hover {
       background-color: grey;
     }
 
@@ -625,6 +639,58 @@ footer p {
       pointer-events: none; /* Disable clicks while popup is active */
       user-select: none;
     }
+
+
+
+
+
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  margin: 3em auto;
+  display: flex;
+  gap: 1em;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel::scroll-button(right),.carousel::scroll-button(left) {
+  content: '==>';
+  border: none;
+  background-color: green;
+  color: white;
+  font-family: Consolas;
+  font-size: 3rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding-bottom: .1em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+}
+
+.carousel::scroll-button(right):disabled,.carousel::scroll-button(left):disabled{
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.card {
+  flex: 0 0 20em;
+  height: 12em;
+  background-color: gray;
+  padding: 1em;
+  border-radius: .5em;
+  text-align: center;
+  align-content: center;
+}
 
 
 

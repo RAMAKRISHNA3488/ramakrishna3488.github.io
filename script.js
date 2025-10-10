@@ -8,13 +8,22 @@ function toggleMenu() {
  // Get elements
     const popupOverlay = document.getElementById('popup-overlay');
     const mainContent = document.getElementById('main-content');
-    const closeBtn = document.getElementById('close-btn');
+    const closeBtn = document.getElementById('enterBtn');
+
+    const cancelBtn = document.getElementById('cancelBtn');
+
 
     // When user clicks "Enter"
     closeBtn.addEventListener('click', () => {
       popupOverlay.style.display = 'none'; // hide popup
       document.body.classList.remove('popup-active'); // remove popup class
       mainContent.style.display = 'block'; // show portfolio
+    });
+
+    // "Cancel" button → redirect to 404 page
+    cancelBtn.addEventListener('click', () => {
+      window.location.href = './error.html';
+      mainContent.style.backgroundColor='white';// change this if your 404 page path is different
     });
 
 

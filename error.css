@@ -1,0 +1,28 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  align-items: center;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.error{
+    background-image: url(./assets/404\ Error.gif);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
